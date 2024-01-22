@@ -1,33 +1,45 @@
-/*//Variables
-let numeroSecreto = 6;
+//Variables
 let numeroUsuario = 0;
 let intentos = 1;
-let palabraVeces = 'vez';
+//let palabraVeces = 'vez';
+let numeroMaximo = 3;
 
-while (numeroUsuario == numeroSecreto) {
+let numeroPedido = 0;
+numeroPedido = prompt('Indica el número máximo para adivinar el número secreto');
 
-    let numeroUsuario = prompt('¿Me indicas un numero por favor?');
+let numeroSecreto = Math.floor(Math.random() * numeroPedido) + 1;
+
+console.log(numeroSecreto);
+
+while (numeroUsuario != numeroSecreto) {
+
+    let numeroUsuario = parseInt(prompt(`¿Me indicas un numero del 1 al ${numeroPedido} por favor?`));
 
     //alert('Hola Mundo');
-    console.log(numeroUsuario);
+    console.log(typeof(numeroUsuario));
 
     //Este código realiza comparación
     if (numeroUsuario == numeroSecreto) {
         //Condición verdadera
-        alert(`!Has acertado! El numero secreto es el ${numeroSecreto}. Lo hiciste en ${intentos} ${palabraVeces}`);
+        alert(`!Has acertado! El numero secreto es el ${numeroSecreto}. Lo hiciste en ${intentos} ${intentos == 1 ? 'intento' : 'intentos'}`);
+        break;
     } else {
         if(numeroUsuario > numeroSecreto) {
             alert('El número secreto es menor');
         } else {
             alert('El número secreto es mayor');
         }
+        if (intentos == numeroMaximo){
+            alert('Has fallado 3 veces. El juego ha terminado');
+            break;
+        }
         //Incrementamos el contador cuando no acierta
-        intentos = intentos + 1;
+        intentos++;
         //Condición falsa
         //alert('Has fallado');
-        palabraVeces = 'veces';
+        //palabraVeces = 'veces';
     }
-}*/
+}
 
 ////////////////////////////////////////////////////////////////
 //DESAFÍO 1
@@ -105,3 +117,47 @@ while (numero >= contadorDos) {
     console.log(contadorDos);
     contadorDos++;
 }*/
+
+////////////////////////////////////////////////////////////////
+//DESAFÍO 4
+
+/*let nombre = "Abraham"
+
+let valor1 = 5;
+let valor2 = 2;
+let resultado = valor1 + valor2;
+let resultado2 = valor1 - valor2;
+
+console.log("¡Bienvenido!");
+
+alert(`¡Bienvenido ${nombre}!`);
+let lenguajeFav = prompt("Cúal es el lenguaje de programación que más te gusta?");
+
+console.log(`La suma de ${valor1} y ${valor2} es ${resultado}`);
+console.log(`La resta de ${valor1} y ${valor2} es ${resultado2}`);
+
+let edad = prompt("Cúal es tu edad?");
+if (edad > 0){
+    alert(`Tienes ${edad} años`);
+} else {
+    alert("Error, ingresa un número válido");
+}
+
+let numero = 1;
+
+while (numero <= 10) {
+    console.log(numero);
+    numero++;
+}
+
+let nota = 10;
+
+if (nota >= 7) {
+    console.log("Aprobado");
+} else {    
+    console.log("Desaprobado");
+}
+
+console.log(Math.random());
+console.log(Math.random() * 10);
+console.log(Math.floor(Math.random() * 1000) + 1);*/
