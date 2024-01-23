@@ -62,10 +62,16 @@ body::before {
     font-weight: 700;
     border: none;
     margin-top: 2rem;
+    cursor: pointer;
+}
+
+.container__boton:hover {
+    background: #0e61c5;
 }
 
 .container__boton:disabled {
     background: #898989;
+    cursor: not-allowed;
 }
 
 .container__texto {
