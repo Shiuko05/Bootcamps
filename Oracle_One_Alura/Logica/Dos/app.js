@@ -9,6 +9,7 @@ function asignarTextoElemento(elemento, texto) {
     return;
 }
 
+
 function verificarIntento() {
     let numeroDeUsuario = parseInt(document.getElementById('valorUsuario').value); 
     
